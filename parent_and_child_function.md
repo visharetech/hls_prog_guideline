@@ -1,4 +1,13 @@
 ## Parent and Child Function
+You could use HLS_CHILD_CALL() to call a HLS child function in parent HLS function.
+
+```C
+HLS_CHILD_INIT();
+HLS_CHILD_CALL(hls_id, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
+```
+
+In the parent HLS function, HLS_CHILD_INIT() should be invoked first before any HLS child function.
+
 If the variable is modified by a child function, the volatile keyword should be added to the parent function's argument so that Vitis HLS can identify the data might change after HLS_CHILD_CALL is involved.
 
 <br/>![volatile example](img/flow_detect_volatile_example.png)
