@@ -1,13 +1,13 @@
-## Introduction
-IMPL() macro should be added for each HLS function so that the hls_tools can identify and automatic generate additional functions for capturing data / perform co-simulation. Additional, several memory interfaces are provided for HLS functions to share the data with RISC-V. They are XMEM, DCACHE and APCALL arguments.
+## 5. HLS Arguments
+XMEM, DCACHE and APCALL arguments could be used to share the variable between riscv and these HLS functions.
 
-### XMEM
+### 5.1 XMEM
 XMEM is a shared memory region used to share small and frequently accessed variables between HLS functions and RISC-V.
 
-### DCACHE
+### 5.2 DCACHE
 The DCACHE interface can allow HLS to access the DDR memory transparently. Access times can vary depending on the cache miss rate and are generally slower than those of the XMEM variables.
 
-### APCALL argument
+### 5.3 APCALL argument
 You can choose to pass the arguments using the apcall argument. The significant limitation include: support for input type only, a maximum of 8 arguments and a maximum width of 32 bits im each argument. Generally, use the XMEM region is a better way to share data between HLS and RISC-V.
 
 ### Example:
@@ -41,4 +41,4 @@ int IMPL(fa_hls)(int xm_a, int xm_b, int xm_arr[5], int *xm_ptr, struct pos xm_p
 | xm_pos                         | xmem variable (struct type in HLS respective)<br/>must add #pragma DISAGGREGATE statement in HLS definition<br/>Vitis HLS will convert to xm_pos_x and xm_pos_y arguments |
 | c                              | apcall argument                                                                                              |
 | DCACHE_ARG(uint8_t, buf, 1024) | dcache argument                                                                                              |
-| uint32_t dcache[DCACHE_SIZE]   | Essential for dcache                                                                                         |
+| uint32_t dcache[DCACHE_SIZE]   | Essential for dcache                    

@@ -1,4 +1,4 @@
-## dcache
+## 7. dcache
 
 If the variable size is too large / not suitable to fit into xmem, you could use DCACHE interface to access the variable content in the risc-v.
 
