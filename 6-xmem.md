@@ -20,3 +20,4 @@ Support datatype:
 * Array (cyclic partition)
 
 Currently, it doesn't support array of structure (struct person[10]..etc..).
+If it is an array of structure, please split it into individual element arrays or just simply use DCACHE interface.

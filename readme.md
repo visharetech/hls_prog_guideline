@@ -1,4 +1,6 @@
 ## HLS Programming Guideline
+
+## Basic
 1. [Introduction](1-introduction.md)
 2. [Installation](2-installation.md)
 3. [Example](3-example.md)
@@ -7,5 +9,8 @@
 6. [XMEM](6-xmem.md)
 7. [Dcache](7-dcache.md)
 
-## Advanced Usage
+## Advanced Topic
 1. [Parent and Child Function](a1-parent-and-child-function.md)
+
+## Tutorial Example
+1. [Tutorial](t1-tutorial.md)

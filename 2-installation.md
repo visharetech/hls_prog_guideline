@@ -1,5 +1,8 @@
 ## 2. Installation
 ### 2.1 Prerequisite
+
+Vitis HLS should be installed. In Windows platform, please execute the hls_tools in a WSL environment.
+
 Please install below package:
 ```bash
 sudo apt update

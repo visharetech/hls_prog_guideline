@@ -1,5 +1,5 @@
 ## 4. Detail Operation
-when execute ./run.sh command, it will
+When execute ./run.sh command, it will
 
 1. Scan and extract the function list from the hls source file hls.cpp (`${hls_src_file}`)
 2. Generate hls_enum.h (`enum_header_file`) to assign unique ID per dedicated HLS function
